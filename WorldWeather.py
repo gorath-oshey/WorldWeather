@@ -31,9 +31,12 @@ def print_weather(weather):
         sunrise = time.strftime("%H:%M:%S", sunrise_struct_time)
         sunset = time.strftime("%H:%M:%S", sunset_struct_time)
         if params["lang"] == "ua":
-            return f"Місто: {city}, {country} \nТемпература: {temp} °C \nАтмосферний тиск: {pressure} гПа \nВологість: {humidity} % \nШвидкість вітру: {wind} м/с \nПогодні умови: {desc} \nСхід сонця: {sunrise} \nЗахід сонця: {sunset}"
+            return f"Місто: {city}, {country} \nТемпература: {temp} °C \nАтмосферний тиск: " \
+                   f"{pressure} гПа \nВологість: {humidity} % \nШвидкість вітру: {wind} м/с \nПогодні умови: " \
+                   f"{desc} \nСхід сонця: {sunrise} \nЗахід сонця: {sunset}"
         else:
-            return f"Location: {city}, {country} \nTemperature: {temp} °C \nPressure: {pressure} Pa \nHumidity: {humidity} % \nWind speed: {wind} m/s \nWeather: {desc} \nSunrise: {sunrise} \nSunset: {sunset}"
+            return f"Location: {city}, {country} \nTemperature: {temp} °C \nPressure: {pressure} Pa \nHumidity: " \
+                   f"{humidity} % \nWind speed: {wind} m/s \nWeather: {desc} \nSunrise: {sunrise} \nSunset: {sunset}"
     except:
         if params["lang"] == "ua":
             return "Помилка отримання даних..."
